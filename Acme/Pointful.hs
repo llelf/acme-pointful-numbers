@@ -53,3 +53,11 @@ instance Category Chuwabra where
 instance Num (Chuwabra a b) => Fractional (Chuwabra a b) where
     fromRational = Pointful . map read . splitOn "." . show . fromRational
 
+
+-- So how in the hell this bloody magic works
+--
+--   1        is fromInteger 1 ∷ Pointful
+--   3.14     is fromRational (157 % 50)
+--   3.14.159 is 3.14 . 159
+--            etc
+
