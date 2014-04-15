@@ -1,3 +1,23 @@
+-- |
+-- Module      : Acme.Pointful
+-- Copyright   : (c) 2014 Anton Nikishaev
+--
+-- License     : BSD-style
+-- Maintainer  : a@lelf.me
+-- 
+-- This module allows you to make more points in your numbers
+-- 
+-- > import Prelude hiding ((.))
+-- > import Acme.Pointful       -- re-exports Control.Category's (.)
+-- >
+-- >
+-- > ghc, ip ∷ Pointful
+-- >
+-- > ghc = 7.8.2                -- ≡ Pointful [7,8,2]
+-- > ip  = 192.168.100.1
+-- 
+-- Don't use if your code is not pointless enough.
+
 {-# LANGUAGE UndecidableInstances #-}
 {-# LANGUAGE FlexibleContexts #-}
 
