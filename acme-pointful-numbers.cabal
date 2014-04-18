@@ -9,9 +9,9 @@ description:         Allows use to write more pointful than usual numbers. Examp
                      This is very useful for various obvious undisclosed reasons.
 license:             BSD3
 license-file:        LICENSE
-author:              Anton Nikishaev
-maintainer:          Anton Nikishaev <a@lelf.me>
-category:            acme
+author:              Antonio Nikishaev
+maintainer:          Antonio Nikishaev <a@lelf.me>
+category:            ACME
 build-type:          Simple
 cabal-version:       >=1.10
 

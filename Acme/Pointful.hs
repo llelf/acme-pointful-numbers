@@ -1,6 +1,6 @@
 -- |
 -- Module      : Acme.Pointful
--- Copyright   : (c) 2014 Anton Nikishaev
+-- Copyright   : (c) 2014 Antonio Nikishaev
 --
 -- License     : BSD-style
 -- Maintainer  : a@lelf.me
