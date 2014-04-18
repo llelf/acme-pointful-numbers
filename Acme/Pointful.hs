@@ -16,6 +16,9 @@
 -- > ghc = 7.8.2                -- ≡ Pointful [7,8,2]
 -- > ip  = 192.168.100.1
 -- 
+-- It won't work with big numbers (and it won't even try to prevent incorrect results).
+-- Up to 7 digits is ok.
+--
 -- Don't use if your code is not pointless enough.
 
 {-# LANGUAGE UndecidableInstances #-}
