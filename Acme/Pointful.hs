@@ -42,6 +42,7 @@ instance Num (Chuwabra a b) where
     fromInteger = Pointful . (:[])
     abs    = undefined
     signum = undefined
+    negate = undefined
     (+)    = undefined
     (*)    = undefined
 
@@ -52,6 +53,7 @@ instance Category Chuwabra where
 
 instance Num (Chuwabra a b) => Fractional (Chuwabra a b) where
     fromRational = Pointful . map read . splitOn "." . show . fromRational
+    recip        = undefined
 
 
 -- So how in the hell this bloody magic works
@@ -60,4 +62,5 @@ instance Num (Chuwabra a b) => Fractional (Chuwabra a b) where
 --   3.14     is fromRational (157 % 50)
 --   3.14.159 is 3.14 . 159
 --            etc
+--
 
