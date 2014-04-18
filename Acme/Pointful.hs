@@ -27,6 +27,7 @@ module Acme.Pointful (Pointful,
                       id,(.)) where
 
 import Prelude hiding (id,(.))
+import Numeric
 import Control.Category
 import Data.List.Split
 
@@ -52,7 +53,7 @@ instance Category Chuwabra where
     Pointful a . Pointful b = Pointful $ a++b
 
 instance Num (Chuwabra a b) => Fractional (Chuwabra a b) where
-    fromRational = Pointful . map read . splitOn "." . show . fromRational
+    fromRational = Pointful . map read . splitOn "." . flip (showFFloat Nothing) "" . fromRational
     recip        = undefined
 
 
