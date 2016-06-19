@@ -1,6 +1,6 @@
 -- |
 -- Module      : Acme.Pointful
--- Copyright   : (c) 2014 Antonio Nikishaev
+-- Copyright   : (c) 2014,2016 Antonio Nikishaev
 --
 -- License     : BSD-style
 -- Maintainer  : a@lelf.me
@@ -46,12 +46,12 @@ type Pointful = () + ((),())
 
 
 instance Num (Chuwabra a b) where
-    fromInteger = Pointful . (:[])
-    abs    = undefined
-    signum = undefined
-    negate = undefined
-    (+)    = undefined
-    (*)    = undefined
+    fromInteger               = Pointful . (:[])
+    abs (Pointful ds)         = Pointful $ map abs ds
+    signum (Pointful ds)      = Pointful $ map signum ds
+    negate (Pointful ds)      = Pointful $ map negate ds
+    Pointful as + Pointful bs = Pointful $ zipWith (+) as bs
+    Pointful as * Pointful bs = Pointful $ zipWith (*) as bs
 
 
 instance Category Chuwabra where
