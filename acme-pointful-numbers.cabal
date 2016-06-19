@@ -14,6 +14,8 @@ maintainer:          Antonio Nikishaev <a@lelf.me>
 category:            ACME
 build-type:          Simple
 cabal-version:       >=1.10
+tested-with:         GHC == 7.8.4, GHC == 7.10.3, GHC == 8.0.1
+
 
 library
   exposed-modules:     Acme.Pointful
